@@ -81,21 +81,7 @@ public class DatabaseUtils {
     }
 
     public static void main(String[] args) {
-        //beta
-//        ResultSet resultSet = executeQuery("jdbc:mysql://169.44.62.140:3306/jolly_split_order_user?useUnicode=true&characterEncoding=UTF-8",
-//                "test", "l8ka65##1", "SELECT * from who_sms_send_log WHERE mobile=\"971553528528\" ORDER BY log_id DESC LIMIT 1;");
-
-        //weekly
-        ResultSet resultSet = executeQuery("jdbc:mysql://172.31.0.68:3306/jolly_split_order_user?useUnicode=true&characterEncoding=UTF-8",
-                "test_update", "l8ka65", "SELECT * from who_sms_send_log ORDER BY log_id DESC LIMIT 1;");
-
-        try {
-            if (resultSet.next()) {
-                log.debug(resultSet.getString("task_id"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        
     }
 
 }
