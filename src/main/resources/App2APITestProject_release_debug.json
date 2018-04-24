@@ -1,0 +1,36 @@
+{
+  "globalRequestParameters": {
+    "appVersion": "6.15"
+  },
+  "projectName": "App",
+  "testCaseList": [
+    {
+      "afterSql": [],
+      "apiUrl": "http://yourHost/search",
+      "beforeSql": [],
+      "caseComment": "搜索接口测试",
+      "description": "功能测试",
+      "method": "POST",
+      "name": "search--function test--001",
+      "requestContentType": "json",
+      "requestParameters": {
+        "keyword": "basketball"
+      },
+      "responseAsserts": [
+        {
+          "assertCondition": "is",
+          "jsonPath": "$.messageCode",
+          "value": "0"
+        },
+        {
+          "assertCondition": "is",
+          "jsonPath": "$.messageType",
+          "value": 0
+        }
+      ],
+      "responseCode": 200,
+      "responseContentType": "json",
+      "updateRequestParameters": []
+    }
+  ]
+}
