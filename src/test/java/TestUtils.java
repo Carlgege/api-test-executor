@@ -17,13 +17,6 @@ public class TestUtils {
     }
 
     @Test
-    public void test2() {
-        HttpUtils.post("http://172.31.9.189:9980/autotestserver/task/taskId/2",
-                "[{\"endTime\":1522639544769,\"errorInfo\":\"\",\"name\":\"/user/emailExists.do--function test1\",\"resBody\":\"{\\\"isExists\\\":0,\\\"message\\\":\\\"Success\\\",\\\"messageCode\\\":\\\"0\\\",\\\"messageType\\\":0,\\\"result\\\":0}\",\"result\":\"pass\",\"runTime\":3617,\"startTime\":1522639541152}]");
-
-    }
-
-    @Test
     public void test3() {
         StringBuilder failMsg = new StringBuilder();
         failMsg.append("# [APP2接口运行结果](http://172.31.11.171:8180/)");
@@ -40,12 +33,6 @@ public class TestUtils {
         Matcher matcher = pattern.matcher(s);
         System.out.println(matcher.find());
         System.out.println(matcher.group());
-    }
-
-    @Test
-    public void test5() {
-        System.out.println(HttpUtils.post("http://localhost:9105/login", "{\"account\":\"clark\", \"password\":\"1\"}"));
-
     }
 
 }
